@@ -283,16 +283,16 @@ void Monitor_RF()
       Serial.println("-Button2: " + (String)bitRead(buffer, 5));
       Serial.println("-----------------------------------");
       
-      // Ativa ou desativa Alarme 
+      // Ativa ou desativa Alarme  - coloque o código do seu controle remoto no lugar de 123456
       
          
-      if ((addr == 0x205718) && (bitRead(buffer, 4)==1) && (bitRead(buffer, 5)==0))  // Botão 1 do controle remoto acionado 
+      if ((addr == 0x123456) && (bitRead(buffer, 4)==1) && (bitRead(buffer, 5)==0))  // Botão 1 do controle remoto acionado 
        {
         Alarme_ativado = true;
         Liga_Alarme();
        }
       
-      if ((addr == 0x205718) && (bitRead(buffer, 4)==0) && (bitRead(buffer, 5)==1))  // Botão 2 do controle remoto acionado
+      if ((addr == 0x123456) && (bitRead(buffer, 4)==0) && (bitRead(buffer, 5)==1))  // Botão 2 do controle remoto acionado
        {
         Alarme_ativado = false;
         Desliga_Alarme();
