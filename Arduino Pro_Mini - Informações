@@ -1,0 +1,27 @@
+
+Esse Sketch é para ser usado mo Arduino Pro Mini. Permite que o esse Arduino transmita o código do controle remoto (ou do sensor se fio) para o outro Arduino (Central de Alarme) através da interface I2C.
+
+A princípio achei que teria que usar Arrays, pointers para transmitir os quatro bytes do código do controle remoto.
+Portanto fiquei essa ultima  semana estudando também sobre esse assunto. E achei meio enrolado, pois esta sendo novidade para mim, no caso do Sketch. A ultima vez que estudei Matrizes foi a mais de 20 anos atrás...
+
+Pensando mais, descobri que não iria precisar de Arrays (matrizes). São somente quatro bytes. 
+Pois a função Wire.write pode transmitir bytes ou arrays. 
+
+Optei por enviar os quatro bytes, um de cada vez. 
+
+O Arduino Pro Mini (Mestre I2C ) esta ligado ao módulo receptor de RF através do pino digital 2.
+A comunicação entre os dois Arduinos, foi feita pelos pinos Analog 4 (SDA)  e pino Analog 5 (SCL) . 
+Usei resistores de 4,7K ohms para pullup nas duas linhas  (conectados ao +5V) .
+Não se esqueçam de conectar o terra dos dois Arduinos.
+
+O Arduino 2009 (Central do Alarme - no caso escravo I2C ) deixei conectado ao meu PC através da Serial para monitoramento.
+
+
+Vejam a saida da serial do Arduino Pro Mini  - esses quatro bytes são enviados para o outro Arduino (Central do Alarme) através da interface I2C. Esse bytes serão verificados na Central .
+
+Modulo de Descodificacao Pronto 
+Codigo enviado : 854BA15
+Codigo1 = 15
+Codigo2 = BA
+Codigo3 = 54
+Codigo4 = 8
