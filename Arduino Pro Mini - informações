@@ -1,5 +1,4 @@
-
-Esse Sketch é para ser usado mo Arduino Pro Mini. Permite que o esse Arduino transmita o código do controle remoto (ou do sensor se fio) para o outro Arduino (Central de Alarme) através da interface I2C.
+Esse Sketch é para ser usado no Arduino Pro Mini. Permite que esse Arduino transmita o código do controle remoto (ou do sensor se fio) para o outro Arduino (Central de Alarme) através da interface I2C.
 
 A princípio achei que teria que usar Arrays, pointers para transmitir os quatro bytes do código do controle remoto.
 Portanto fiquei essa ultima  semana estudando também sobre esse assunto. E achei meio enrolado, pois esta sendo novidade para mim, no caso do Sketch. A ultima vez que estudei Matrizes foi a mais de 20 anos atrás...
