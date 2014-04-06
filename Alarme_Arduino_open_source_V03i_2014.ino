@@ -218,15 +218,15 @@ void Recebe_codigo (int Numero_bytes)              //   Recebe quatro bytes de C
   
   switch(buffer)
        {      
-        case 0x0815C615:                                              // Código do Controle Remoto 
+        case 0x0835C815:                                              // Código do Controle Remoto 
              Liga_Alarme(); 
              break;
             
-        case 0x0815C625:  
+        case 0x0835C825:  
              Desliga_Alarme(); 
              break; 
           
-       case 0x08414F55:                                              // Sensor Sem Fio 
+       case 0x08516E55:                                              // Sensor Sem Fio 
             if (Alarme_ativado == true) Dispara_Alarme();  
             break;  
            
